@@ -26,14 +26,15 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Miguel Molina</h1>
-								<p>Welcome to my personal page/blog.</p>
+								<p>Software engineer in Brooklyn. Infrastructure by day, soccer the rest of the time.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
 								<li><a href="#about">About</a></li>
-								<li><a href="#blog">Blog</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#blog">Writing</a></li>
+								<li><a href="#soccer">Soccer</a></li>
+								<li><a href="#contact">Links</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -46,64 +47,68 @@
 							<article id="about">
 								<h2 class="major">About</h2>
 								<p>
-									Currently a Software Engineer at <a href="https://www.lyft.com/">Lyft</a>, joined in January of 2018. 
-									I have been working under the infrastrucutre organization in a few different teams.
-									
-									I spent first 5.5 years working on the Deploys team, where I worked on our Auto Deployments system. 
-									You can read <a href="https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a">the blog post I wrote on Continous Deployment at Lyft.</a>
-									Since mid 2023 I have been working on our Compute team working on improving our internal cloud infrastructure and optimizing resource usage.
-
-									I have been working on our automated rightsize system as well as a number of other initiatives to make our Kubernetes platform more efficient.
-									
-									I am a <a href="http://eecs.umich.edu/cse/">Computer Science Engineering</a> Alumni from the <a href="http://umich.edu/">University of Michigan</a> graduated in December 2017.
+									Hi, I'm Miguel! I'm a Senior Software Engineer at <a href="https://www.lyft.com/">Lyft</a> in New York,
+									and I've spent the last nine years or so working in Infrastructure, building the systems that other
+									engineers rely on to ship code and keep it running.
 								</p>
-								<h3>
-									All of my Experience:
-								</h3>
-								<ul class="bump-list">
-									<li>Senior Software Engineer at <a href="https://www.lyft.com/">Lyft</a> -- 2020 - Present</li>
-									<li>Software Engineer at <a href="https://www.lyft.com/">Lyft</a> -- 2018 - 2020</li>
-									<li>Software Engineering Intern at <a href="twitter.com">Twitter</a> -- Summer 2017</li>
-									<li>QA Engineering Intern at <a href="https://www.criteo.com/">Hooklogic (Acquired by Criteo)</a> -- Summer 2016</li>
-								</ul>
+								<p>
+									From 2018 to 2024 I was on the Deploys team, where I helped design Lyft's continuous deployment
+									system. Today more than 95% of Lyft's services use it to ship to production without anyone having to
+									push a button. In 2024 I moved to the Compute team, where I work on our Kubernetes platform.
+									I helped build Facets and FacetController, an abstraction and controller that let us roll out
+									infrastructure changes across the whole fleet safely, and I lead our automated resource rightsizing
+									work so that services get the CPU and memory they actually need. I was also one of the shared execution
+									leads across the Infrastructure teams for Lyft's launch in Europe.
+								</p>
+								<p>
+									Outside of work you'll usually find me watching, talking about, or traveling for soccer.
+									There's more about that in the <a href="#soccer">Soccer</a> section.
+								</p>
+								<p>
+									I studied Computer Science Engineering at the <a href="https://umich.edu/">University of Michigan</a> (B.S.E., 2017). Go Blue!
+								</p>
+							</article>
 
-								<h3>Some of the relvant courses that I took:</h3>
+						<!-- Writing -->
+							<article id="blog">
+								<h2 class="major">Writing</h2>
+								<p>A few things I've written, mostly on the Lyft Engineering blog:</p>
 								<ul class="bump-list">
-									<li><a href="https://lamport.eecs.umich.edu/#overview">EECS 498: Distributed Systems</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-3">EECS 485: Web Databases and Info Systems</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-3">EECS 482: Introduction to Operating Systems</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-3">EECS 486: Information Retrieval</a></li>
-									<li><a href="http://www.engin.umich.edu/college/academics/bulletin/courses/eecs#300levelcourses">EECS 388: Introduction to Computer Security</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-3">EECS 492: Introduction to Artificial Intelligence</a></li>
-									<li><a href="http://web.eecs.umich.edu/~sugih/courses/eecs441/">EECS 441: Mobile App Development</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-3">EECS 493: User Interface Development</a></li>
-									<li><a href="https://bulletin.engin.umich.edu/courses/eecs/#subnav-1">EECS 281: Data Structures and Algorithms</a></li>
-								</ul>
-								<h3>Experience with the following languages and technologies:</h3>
-								<ul class="bump-list">
-									<li>Go (been using it every day at Lyft for 7 years)</li>
-									<li>Kubernetes (use it every day at work)</li>
-									<li>Python (use it most days at work)</li>
-									<li>Amazon Web Services</li>
-									<li>C++ (used it in college)</li>
-									<li>React.js</li>
-									<li>JavaScript</li>
-									<li>Scala (Finatra)</li>
-									<li>Git</li>
-									<li>HTML</li>
-									<li>MySQL</li>
-									<li>WordPress</li>
+									<li>
+										<a href="https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a">Continuous Deployment at Lyft</a>,
+										how we moved Lyft to fully automated deploys.
+										Also in Spanish: <a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/despliegues-continuos-de-c%C3%B3digo-en-lyft-b5496c5055c2"><em>Despliegues continuos de código en Lyft</em></a>.
+									</li>
+									<li>
+										<a href="https://eng.lyft.com/facetcontroller-how-we-made-infrastructure-changes-at-lyft-simple-dab49f5b27c7">FacetController: How we made infrastructure changes at Lyft simple</a>
+										(co-author), about our Kubernetes abstraction for fleet-wide changes.
+									</li>
+									<li>
+										<a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/traduciendo-lyft-al-espa%C3%B1ol-4cce4efe3fa5"><em>Traduciendo Lyft al español</em></a>,
+										written in Spanish, about bringing the Lyft app to Spanish speakers.
+									</li>
+									<li><a href="#bash">Useful bash aliases</a>, a few bits from my shell config.</li>
 								</ul>
 							</article>
 
-						<!-- Blog -->
-							<article id="blog">
-								<h2 class="major">Blog</h2>
-								<h3>Some blog posts I have written for work and by myself:</h3>
-								<h3><li><a href="https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a">Continous Deployment at Lyft</a></li></h3>
-								<h3><li><a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/despliegues-continuos-de-c%C3%B3digo-en-lyft-b5496c5055c2">Continous Deployment at Lyft (Spanish)</a></li></h3>
-								<h3><li><a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/traduciendo-lyft-al-espa%C3%B1ol-4cce4efe3fa5">Translating Lyft App to Spanish (in Spanish)</a></li></h3>
-								<h3><li><a href="#bash">Useful bash aliases</a></li></h3>
+						<!-- Soccer -->
+							<article id="soccer">
+								<h2 class="major">Soccer</h2>
+								<p>
+									Soccer is the thing I care about most outside of work. Lately that has meant
+									following the big tournaments wherever they're played:
+								</p>
+								<ul class="bump-list">
+									<li>FIFA World Cup 2018 in Russia</li>
+									<li>FIFA World Cup 2022 in Qatar</li>
+									<li>Copa América 2024 in the United States</li>
+									<li>FIFA Club World Cup 2025 in the United States</li>
+									<li>FIFA World Cup 2026 in the United States, Canada and Mexico</li>
+								</ul>
+								<p>
+									Every trip has left me with new friends, stadiums I'll never forget, and far too many scarves.
+									I'm working on writing some of these stories down, so check back here for more.
+								</p>
 							</article>
 
 							<article id="bash">
@@ -147,13 +152,12 @@ function gmit() {
 							</article>
 
 
-					<!-- Contact -->
+					<!-- Links -->
 					<article id="contact">
-						<h2 class="major">Contact</h2>
-						<h3>Contact me via email or you can take a look at my github or linkedin profiles.</h3>
-						<p><a href="mailto:miguelmolinasilva@gmail.com">miguelmolinasilva@gmail.com</a></p>
+						<h2 class="major">Links</h2>
+						<p>You can find me on LinkedIn and GitHub.</p>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/miguel-molina-594475120/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://www.linkedin.com/in/miguel-molina-594475120" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/miguelmolina95" class="icon fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</article>
@@ -162,7 +166,7 @@ function gmit() {
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Miguel Molina. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>

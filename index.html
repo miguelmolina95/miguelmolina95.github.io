@@ -1,14 +1,21 @@
+---
+layout: null
+---
 <!DOCTYPE HTML>
 <!--
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	To edit the text on this page, change the Markdown files in the content/ folder.
+	This file is only the layout.
 -->
 <html>
 	<head>
 		<title>Miguel Molina</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Miguel Molina: software engineer in Brooklyn, soccer fan and marathon runner." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -21,12 +28,12 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span><img class="logo" src="images/linkedinpic.jpg" alt="" /></span>
+							<span><img class="logo" src="images/profile.jpg" alt="Miguel Molina" /></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Miguel Molina</h1>
-								<p>Software engineer in Brooklyn. Infrastructure by day, soccer the rest of the time.</p>
+								{% capture tagline %}{% include_relative content/tagline.md %}{% endcapture %}{{ tagline | markdownify }}
 							</div>
 						</div>
 						<nav>
@@ -35,7 +42,6 @@
 								<li><a href="#blog">Writing</a></li>
 								<li><a href="#soccer">Soccer</a></li>
 								<li><a href="#contact">Links</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
@@ -43,124 +49,34 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<p>
-									Hi, I'm Miguel! I'm a Senior Software Engineer at <a href="https://www.lyft.com/">Lyft</a> in New York,
-									and I've spent the last nine years or so working in Infrastructure, building the systems that other
-									engineers rely on to ship code and keep it running.
-								</p>
-								<p>
-									From 2018 to 2024 I was on the Deploys team, where I helped design Lyft's continuous deployment
-									system. Today more than 95% of Lyft's services use it to ship to production without anyone having to
-									push a button. In 2024 I moved to the Compute team, where I work on our Kubernetes platform.
-									I helped build Facets and FacetController, an abstraction and controller that let us roll out
-									infrastructure changes across the whole fleet safely, and I lead our automated resource rightsizing
-									work so that services get the CPU and memory they actually need. I was also one of the shared execution
-									leads across the Infrastructure teams for Lyft's launch in Europe.
-								</p>
-								<p>
-									Outside of work you'll usually find me watching, talking about, or traveling for soccer.
-									There's more about that in the <a href="#soccer">Soccer</a> section.
-								</p>
-								<p>
-									I studied Computer Science Engineering at the <a href="https://umich.edu/">University of Michigan</a> (B.S.E., 2017). Go Blue!
-								</p>
-							</article>
+						<article id="about">
+							<h2 class="major">About</h2>
+							{% capture about %}{% include_relative content/about.md %}{% endcapture %}{{ about | markdownify }}
+						</article>
 
-						<!-- Writing -->
-							<article id="blog">
-								<h2 class="major">Writing</h2>
-								<p>A few things I've written, mostly on the Lyft Engineering blog:</p>
-								<ul class="bump-list">
-									<li>
-										<a href="https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a">Continuous Deployment at Lyft</a>,
-										how we moved Lyft to fully automated deploys.
-										Also in Spanish: <a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/despliegues-continuos-de-c%C3%B3digo-en-lyft-b5496c5055c2"><em>Despliegues continuos de código en Lyft</em></a>.
-									</li>
-									<li>
-										<a href="https://eng.lyft.com/facetcontroller-how-we-made-infrastructure-changes-at-lyft-simple-dab49f5b27c7">FacetController: How we made infrastructure changes at Lyft simple</a>
-										(co-author), about our Kubernetes abstraction for fleet-wide changes.
-									</li>
-									<li>
-										<a href="https://medium.com/lyft-engineering-en-espa%C3%B1ol/traduciendo-lyft-al-espa%C3%B1ol-4cce4efe3fa5"><em>Traduciendo Lyft al español</em></a>,
-										written in Spanish, about bringing the Lyft app to Spanish speakers.
-									</li>
-									<li><a href="#bash">Useful bash aliases</a>, a few bits from my shell config.</li>
-								</ul>
-							</article>
+						<article id="blog">
+							<h2 class="major">Writing</h2>
+							{% capture writing %}{% include_relative content/writing.md %}{% endcapture %}{{ writing | markdownify }}
+						</article>
 
-						<!-- Soccer -->
-							<article id="soccer">
-								<h2 class="major">Soccer</h2>
-								<p>
-									Soccer is the thing I care about most outside of work. Lately that has meant
-									following the big tournaments wherever they're played:
-								</p>
-								<ul class="bump-list">
-									<li>FIFA World Cup 2018 in Russia</li>
-									<li>FIFA World Cup 2022 in Qatar</li>
-									<li>Copa América 2024 in the United States</li>
-									<li>FIFA Club World Cup 2025 in the United States</li>
-									<li>FIFA World Cup 2026 in the United States, Canada and Mexico</li>
-								</ul>
-								<p>
-									Every trip has left me with new friends, stadiums I'll never forget, and far too many scarves.
-									I'm working on writing some of these stories down, so check back here for more.
-								</p>
-							</article>
+						<article id="soccer">
+							<h2 class="major">Soccer</h2>
+							{% capture soccer %}{% include_relative content/soccer.md %}{% endcapture %}{{ soccer | markdownify }}
+						</article>
 
-							<article id="bash">
-								<h2 class="major">Useful bash aliases</h2>
-								<h4>Here is part of my .bash_profile</h4>
-								<pre><code>export PS1="\[\033[1;32m\]\u\[\033[0m\]:\[\033[1;34m\]\W\[\033[0m\]$ "
+						<article id="bash">
+							<h2 class="major">Useful bash aliases</h2>
+							{% capture bash %}{% include_relative content/bash-aliases.md %}{% endcapture %}{{ bash | markdownify }}
+						</article>
 
-# Full look at the directory
-alias ll="ls -lhaG"
-
-# Changing dirs
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-# Some handy stuff
-alias c="clear"
-alias numFiles="echo $(ls -1 | wc -l)"
-alias copypath='pwd|pbcopy'
-
-# Process
-alias ps="ps -ax"
-
-# lock computer
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-
-# refresh shell
-alias reload_bash='source ~/.bash_profile'
-
-# Directories made easy
-function mkd() {
-    mkdir -p "$@" && cd "$@"
-}
-
-# One command to git them all
-function gmit() {
-	git pull && git add -A && git commit -m "$@" && git push
-}
-</code></pre>
-							</article>
-
-
-					<!-- Links -->
-					<article id="contact">
-						<h2 class="major">Links</h2>
-						<p>You can find me on LinkedIn and GitHub.</p>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/miguel-molina-594475120" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/miguelmolina95" class="icon fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</article>
+						<article id="contact">
+							<h2 class="major">Links</h2>
+							{% capture links %}{% include_relative content/links.md %}{% endcapture %}{{ links | markdownify }}
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/miguel-molina-594475120" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/miguelmolina95" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</article>
 
 					</div>
 

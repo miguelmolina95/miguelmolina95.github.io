@@ -1,1 +1,11 @@
-theme: jekyll-theme-cayman
+# GitHub Pages builds this site with Jekyll.
+# Page text lives in content/*.md and is pulled into index.html.
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+exclude:
+  - content
+  - README.md
+  - assets/sass

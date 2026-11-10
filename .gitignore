@@ -1,2 +1,6 @@
 # Ignore all .DS_Store files
 .DS_Store
+
+# Local Jekyll build output
+_site/
+.jekyll-cache/

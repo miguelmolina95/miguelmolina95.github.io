@@ -7,4 +7,3 @@ A few things I've written, mostly on the Lyft Engineering blog:
   (co-author), about our Kubernetes abstraction for fleet-wide changes.
 - [*Traduciendo Lyft al español*](https://medium.com/lyft-engineering-en-espa%C3%B1ol/traduciendo-lyft-al-espa%C3%B1ol-4cce4efe3fa5),
   written in Spanish, about bringing the Lyft app to Spanish speakers.
-- [Useful bash aliases](#bash), a few bits from my shell config.

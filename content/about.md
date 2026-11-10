@@ -13,6 +13,7 @@ I was also one of the shared execution leads across the Infrastructure teams for
 
 Outside of work you'll usually find me watching, talking about, or traveling for soccer.
 There's more about that in the [Soccer](#soccer) section.
-In 2026 I also ran the New York City Marathon.
+
+I started running at the end of 2024, and in 2026 I ran the New York City Marathon.
 
 I studied Computer Science Engineering at the [University of Michigan](https://umich.edu/) (B.S.E., 2017). Go Blue!

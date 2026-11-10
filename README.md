@@ -12,7 +12,6 @@ All of the page text lives in Markdown files in [`content/`](content/):
 | `about.md` | About |
 | `writing.md` | Writing |
 | `soccer.md` | Soccer |
-| `bash-aliases.md` | Useful bash aliases |
 | `links.md` | Links (the LinkedIn/GitHub icons are in `index.html`) |
 
 `index.html` is only the layout (HTML5 UP "Dimension" template). GitHub Pages builds it with Jekyll on push.
